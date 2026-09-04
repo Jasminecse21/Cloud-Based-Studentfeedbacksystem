@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cloud-Based Student Feedback Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="container nav">
+            <h1>Student Feedback System</h1>
+            <span>Cloud-Based Management</span>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <!-- Welcome Section -->
+        <section class="hero">
+            <h2>Student Feedback Management System</h2>
+            <p>
+                A simple platform for students to provide feedback
+                about faculty and subjects.
+            </p>
+        </section>
+
+        <!-- Feedback Form -->
+        <section class="card">
+            <h2>Submit Your Feedback</h2>
+
+            <form id="feedbackForm">
+
+                <div class="form-group">
+                    <label for="studentName">Student Name</label>
+                    <input
+                        type="text"
+                        id="studentName"
+                        placeholder="Enter your name"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="registerNumber">Register Number</label>
+                    <input
+                        type="text"
+                        id="registerNumber"
+                        placeholder="Enter register number"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="department">Department</label>
+                    <select id="department" required>
+                        <option value="">Select Department</option>
+                        <option value="CSE">Computer Science and Engineering</option>
+                        <option value="ECE">Electronics and Communication Engineering</option>
+                        <option value="EEE">Electrical and Electronics Engineering</option>
+                        <option value="MECH">Mechanical Engineering</option>
+                        <option value="CIVIL">Civil Engineering</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="facultyName">Faculty Name</label>
+                    <input
+                        type="text"
+                        id="facultyName"
+                        placeholder="Enter faculty name"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="subject">Subject</label>
+                    <input
+                        type="text"
+                        id="subject"
+                        placeholder="Enter subject name"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label>Rating</label>
+
+                    <div class="rating">
+                        <label>
+                            <input type="radio" name="rating" value="5" required>
+                            5 - Excellent
+                        </label>
+
+                        <label>
+                            <input type="radio" name="rating" value="4">
+                            4 - Very Good
+                        </label>
+
+                        <label>
+                            <input type="radio" name="rating" value="3">
+                            3 - Good
+                        </label>
+
+                        <label>
+                            <input type="radio" name="rating" value="2">
+                            2 - Average
+                        </label>
+
+                        <label>
+                            <input type="radio" name="rating" value="1">
+                            1 - Poor
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="feedback">Feedback / Comments</label>
+                    <textarea
+                        id="feedback"
+                        rows="5"
+                        placeholder="Enter your feedback"
+                        required
+                    ></textarea>
+                </div>
+
+                <button type="submit">Submit Feedback</button>
+
+            </form>
+
+            <p id="message"></p>
+        </section>
+
+        <!-- Submitted Feedback -->
+        <section class="card">
+            <div class="section-heading">
+                <h2>Submitted Feedback</h2>
+                <button id="clearBtn" class="clear-btn">
+                    Clear All
+                </button>
+            </div>
+
+            <div id="feedbackList">
+                <p class="empty">
+                    No feedback submitted yet.
+                </p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Cloud-Based Student Feedback Management System</p>
+        <p>Cloud Computing Zero Gap Project</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
